@@ -1,4 +1,5 @@
 import Image from 'next/image'
+//igb- 320
 
 export default function About() {
   return (
@@ -6,7 +7,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Habita Safaris</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Igara Tour & Safaris</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Your trusted partner for unforgettable Uganda safari experiences since 2015
           </p>

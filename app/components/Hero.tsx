@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const router = useRouter()
-
+//this is a treking page section for all the photos 
   const slides = [
     {
       image: '/gallery/cover.jpg',

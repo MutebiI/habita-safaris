@@ -1,8 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 export default function BookSafari() {
+  const searchParams = useSearchParams()
+  const selectedPackage = searchParams.get('package')
+  
   const [formData, setFormData] = useState({
     prefix: '',
     name: '',
@@ -16,15 +20,16 @@ export default function BookSafari() {
     budget: '',
     accommodation: '',
     activities: [] as string[],
-    specialRequests: '',
+    specialRequests: selectedPackage ? `Interested in: ${selectedPackage}` : '',
     foundUs: ''
   })
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission with Nodemailer
     console.log('Booking submitted:', formData)
-    alert('Thank you for your safari inquiry! We will contact you within 24 hours to plan your perfect adventure.')
+    setIsSubmitted(true)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -41,6 +46,40 @@ export default function BookSafari() {
         ? prev.activities.filter(a => a !== activity)
         : [...prev.activities, activity]
     }))
+  }
+
+  // Success Message Component
+  if (isSubmitted) {
+    return (
+      <div className="pt-20 min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center px-4">
+        <div className="max-w-md mx-auto text-center bg-white rounded-3xl shadow-2xl p-8">
+          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="text-3xl">✅</span>
+          </div>
+          
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">Thank You!</h1>
+          
+          <p className="text-gray-600 mb-6">
+            Your safari inquiry has been received! Our team will contact you within 24 hours to start planning your adventure.
+          </p>
+
+          <div className="space-y-4">
+            <button 
+              onClick={() => window.location.href = '/'}
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Back to Home
+            </button>
+            <button 
+              onClick={() => window.location.href = '/tours'}
+              className="w-full border border-gray-300 hover:border-green-600 text-gray-700 py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Browse More Tours
+            </button>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -76,6 +115,23 @@ export default function BookSafari() {
                   🎯 Complete this form in 3 simple steps
                 </p>
               </div>
+
+              {/* Package Message - NEW! */}
+              {selectedPackage && (
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8">
+                  <div className="flex items-center">
+                    <span className="text-blue-600 text-lg mr-3">🎯</span>
+                    <div>
+                      <p className="text-blue-800 font-semibold">
+                        You're inquiring about: <span className="underline">{selectedPackage}</span>
+                      </p>
+                      <p className="text-blue-600 text-sm mt-1">
+                        We've pre-filled this in your special requests. Feel free to modify or add more details!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Step 1: Personal Information */}
