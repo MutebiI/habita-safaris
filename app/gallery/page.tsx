@@ -2,10 +2,17 @@
 
 import { useState } from 'react'
 
-export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null)
+interface GalleryImage {
+  id: number
+  src: string
+  category: string
+  title: string
+}
 
-  const galleryImages = [
+export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
+
+  const galleryImages: GalleryImage[] = [
     {
       id: 1,
       src: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
