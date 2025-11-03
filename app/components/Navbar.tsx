@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl font-bold text-green-700">
-            Habita Safaris
+            Igara Tour & Safaris
           </div>
 
           {/* Desktop Menu */}

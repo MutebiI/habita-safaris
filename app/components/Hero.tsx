@@ -1,15 +1,17 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const router = useRouter()
 
   const slides = [
     {
       image: '/gallery/cover.jpg',
       title: 'Discover Uganda',
-      subtitle: 'The Pearl of Africa with Habita Safaris'
+      subtitle: 'The Pearl of Africa with Igara Tour & Safaris'
     },
     {
       image: '/gallery/grok.jpg',
@@ -76,22 +78,28 @@ export default function Hero() {
       
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-3xl md:text-7xl font-bold mb-6 leading-tight">
           {slides[currentSlide].title}
           <span className="block text-3xl md:text-4xl mt-2">
             {slides[currentSlide].subtitle}
           </span>
         </h1>
-        
+    
         <p className="text-xl md:text-2xl mb-8 max-w-3xl leading-relaxed">
           Experience the wild, the culture, and the adventure of a lifetime.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => router.push('/book')}
+            className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             Book a Safari
           </button>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => router.push('/tours')}
+            className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             Explore Packages
           </button>
         </div>

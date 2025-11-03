@@ -1,11 +1,18 @@
 export default function Footer() {
+
+    const currentYear = new Date().getFullYear()
+
+    
+
+
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Habita Safaris</h3>
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Igara Tour & Safaris</h3>
             <p className="text-gray-300 mb-4 max-w-md">
               Experience the wild, the culture, and the adventure of a lifetime in Uganda - The Pearl of Africa.
             </p>
@@ -49,8 +56,8 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>📞 +256 XXX XXX XXX</li>
-              <li>✉️ info@habitasafaris.com</li>
+              <li>📞 +256 784 989515</li>
+              <li>✉️ info@Igara Tour & Safaris</li>
               <li>📍 Uganda, East Africa</li>
             </ul>
           </div>
@@ -58,8 +65,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>© 2025 Habita Safaris. All Rights Reserved.</p>
-          <p className="mt-2">Designed & Powered by [Your Name]</p>
+          <p>© {currentYear} Igara Tour & Safaris . All Rights Reserved.</p>
+          <p className="mt-2">Designed & Powered by Mutebi Ibrahim</p>
         </div>
       </div>
     </footer>
