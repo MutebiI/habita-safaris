@@ -9,6 +9,13 @@ interface GalleryImage {
   title: string
 }
 
+//Book Safaris image 
+//Location in Uganda 
+//Explore our package 
+//Different categories of images in the the Gallery section 
+//Re arranging the The Blog/ News section 
+//Chaning the images 
+
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
 
