@@ -68,7 +68,7 @@ export default function Hero() {
         />
       ))}
       
-      {/* GRADIENT OVERLAY LAYER - You can adjust these! */}
+      {/* GRADIENT OVERLAY LAYER */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-900/60 via-blue-900/40 to-purple-900/30 mix-blend-multiply"></div>
       
       {/* Dark overlay for better text readability */}
@@ -97,16 +97,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300 backdrop-blur-sm"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300 backdrop-blur-sm hidden md:flex"
       >
         ‹
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300 backdrop-blur-sm"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300 backdrop-blur-sm hidden md:flex"
       >
         ›
       </button>
