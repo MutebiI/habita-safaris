@@ -12,7 +12,7 @@ export default function Hero() {
       subtitle: 'The Pearl of Africa with Habita Safaris'
     },
     {
-      image: '/gallery/mountaingorillas.jpg',
+      image: '/gallery/grok.jpg',
       title: 'Mountain Gorillas',
       subtitle: 'Experience rare gorilla trekking adventures'
     },
