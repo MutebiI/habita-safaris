@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation'
 export default function BookSafari() {
   const searchParams = useSearchParams()
   const selectedPackage = searchParams.get('package')
-  
+
   const [formData, setFormData] = useState({
     prefix: '',
     name: '',
