@@ -1,9 +1,9 @@
-
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
 import NextImage from 'next/image'
+import { Suspense } from 'react'
 
 // Define the Tour type
 interface Tour {
@@ -22,7 +22,8 @@ interface Tour {
   excludes: string[]
 }
 
-export default function Tours() {
+// Inner component that uses searchParams
+function ToursContentInner() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const highlightedTourId = searchParams.get('highlight')
@@ -210,6 +211,7 @@ export default function Tours() {
       }, 100)
     }
   }
+
   return (
     <div className="pt-20">
       {/* Hero with Background Image */}
@@ -217,7 +219,7 @@ export default function Tours() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <NextImage
-            src="/gallery/aboutme.jpg" // You can change this to any safari background image
+            src="/gallery/aboutme.jpg"
             alt="Uganda Safari Background"
             fill
             className="object-cover"
@@ -408,5 +410,14 @@ export default function Tours() {
         </div>
       </section>
     </div>
+  )
+}
+
+// Main component with Suspense
+export default function ToursContent() {
+  return (
+    <Suspense fallback={<div>Loading tours...</div>}>
+      <ToursContentInner />
+    </Suspense>
   )
 }
