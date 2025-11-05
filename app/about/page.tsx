@@ -1,22 +1,20 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function About() {
   return (
     <div className="pt-20">
       {/* Modern Hero Section with Background Image */}
       <section className="relative py-24 overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/gallery/aboutme.jpg" // Replace with your preferred image path
+            src="/gallery/unforgetableExperience.jpg"
             alt="Uganda Safari Background"
             fill
             className="object-cover"
             priority
           />
-          {/* Overlay for better text readability */}
           <div className="absolute inset-0 bg-black/40"></div>
-          {/* Optional: Gradient overlay for extra depth */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/40"></div>
         </div>
         
@@ -31,7 +29,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Rest of your existing code remains the same */}
+      {/* Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -90,24 +88,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Values Section */}
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
-              <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Our Commitment</span>
+              <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Excellence</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Why Choose Igara Safaris
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're committed to delivering exceptional experiences while preserving Uganda's natural wonders
+              Discover what sets us apart in creating extraordinary Ugandan adventures
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
                 🌍
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Sustainable Tourism</h3>
@@ -116,8 +114,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
                 ⭐
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Expert Local Guides</h3>
@@ -126,8 +124,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
                 💝
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Tailored Experiences</h3>
@@ -136,8 +134,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl">
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
                 🤝
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Community First</h3>
@@ -145,27 +143,122 @@ export default function About() {
                 We invest in local communities and empower them through responsible tourism initiatives.
               </p>
             </div>
+
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                ✨
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Premium Quality</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Exceptional service, luxury accommodations, and attention to every detail define our safaris.
+              </p>
+            </div>
+
+            <div className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
+                🛡️
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Safety First</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Your safety is our top priority with comprehensive measures and emergency protocols in place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Values Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block mb-4">
+                <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Our Purpose</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                Mission & Vision
+              </h2>
+              
+              <div className="space-y-8">
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border-l-4 border-green-500">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <span className="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                    Our Mission
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    To create extraordinary, personalized safari experiences that showcase Uganda's natural wonders 
+                    while fostering sustainable tourism practices and empowering local communities.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border-l-4 border-blue-500">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    Our Vision
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    To be Uganda's most trusted and innovative safari company, renowned for exceptional service, 
+                    authentic experiences, and meaningful contributions to conservation and community development.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-3xl p-12 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold mb-8">Our Core Values</h3>
+                <div className="space-y-6">
+                  {[
+                    { icon: "❤️", title: "Passion", desc: "Genuine love for Uganda's wildlife and culture" },
+                    { icon: "🤝", title: "Integrity", desc: "Honest, transparent, and ethical practices" },
+                    { icon: "🌱", title: "Sustainability", desc: "Protecting nature for future generations" },
+                    { icon: "⭐", title: "Excellence", desc: "Uncompromising quality in every detail" },
+                    { icon: "👥", title: "Community", desc: "Empowering and supporting local people" }
+                  ].map((value, index) => (
+                    <div key={index} className="flex items-start space-x-4 group">
+                      <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                        {value.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">{value.title}</h4>
+                        <p className="text-white/80 text-sm">{value.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-700 to-emerald-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready for Your Ugandan Adventure?
+      <section className="py-20 bg-gradient-to-r from-green-700 via-emerald-800 to-green-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready for Your Adventure?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Let's create your perfect safari experience together. Contact us to start planning your journey.
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-95 font-light">
+            Let's craft your perfect Ugandan safari experience together
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Plan Your Safari
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-all duration-300">
-              View Packages
-            </button>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link 
+              href="/contact"
+              className="bg-white text-green-700 px-10 py-5 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 text-center text-lg shadow-2xl hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Start Planning Today
+            </Link>
           </div>
+          <p className="mt-6 text-green-200 text-sm">
+            ✨ 100% Satisfaction Guarantee • Best Price Promise • 24/7 Support
+          </p>
         </div>
       </section>
     </div>
