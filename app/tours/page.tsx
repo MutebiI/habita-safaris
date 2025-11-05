@@ -819,10 +819,10 @@
 
 "use client"
 import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
 
 
-const ToursContent = dynamic(() => import('./tourscontent/page'), { ssr: false })
+import ToursContent from './tourscontent/page'
+
 
 export default function ToursPage() {
   return (
