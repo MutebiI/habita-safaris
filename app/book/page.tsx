@@ -1,11 +1,9 @@
 'use client'
 import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
+
 
 // Import the client component dynamically
-const BookSafariForm = dynamic(() => import('../components/BookSafariForm'), { 
-  ssr: false 
-})
+import  BookSafariForm from '../components/BookSafariForm'
 
 export default function BookPage() {
   return (

@@ -820,9 +820,7 @@
 "use client"
 import { Suspense } from 'react'
 
-
-import ToursContent from './tourscontent/page'
-
+import ToursContent from './components/ToursContent'
 
 export default function ToursPage() {
   return (
