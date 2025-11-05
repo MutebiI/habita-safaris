@@ -818,16 +818,20 @@
 // app/tours/page.tsx
 
 "use client"
-import { Suspense } from 'react'
-
-import ToursContent from './components/ToursContent'
-
 export default function ToursPage() {
   return (
-    <div className="min-h-screen">
-      <Suspense fallback={<div>Loading tours...</div>}>
-        <ToursContent />
-      </Suspense>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-green-600 mb-4">
+          Hello World! 🎉
+        </h1>
+        <p className="text-gray-600 text-lg">
+          If you can see this, the build is working!
+        </p>
+        <p className="text-gray-500 mt-2">
+          Build test successful - No useSearchParams issues
+        </p>
+      </div>
     </div>
   )
 }
