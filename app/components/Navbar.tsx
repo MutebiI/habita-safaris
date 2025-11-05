@@ -27,10 +27,10 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition duration-300">
-              Book Now
-            </button>
-          </div>
+            
+           <a href="/book" className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300 text-center block">
+              Book Now</a>
+            </div>
 
           {/* Mobile menu button */}
           <button 
@@ -56,9 +56,8 @@ export default function Navbar() {
               <a href="/gallery" className="text-gray-700 hover:text-green-600 font-medium">Gallery</a>
               <a href="/blog" className="text-gray-700 hover:text-green-600 font-medium">Blog</a>
               <a href="/contact" className="text-gray-700 hover:text-green-600 font-medium">Contact</a>
-              <button className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold w-full">
-                Book Now
-              </button>
+             <a href="/book" className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300 text-center block">
+              Book Now</a>
             </div>
           </div>
         )}
