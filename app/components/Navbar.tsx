@@ -19,7 +19,7 @@ export default function Navbar() {
         setIsOpen(false)
       }
     }
-
+   
     // Add event listener
     document.addEventListener('mousedown', handleClickOutside)
     
