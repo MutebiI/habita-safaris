@@ -58,7 +58,7 @@ export default function BookSafari() {
           </div>
           
           <h1 className="text-3xl font-bold text-gray-800 mb-4">Thank You!</h1>
-          
+          {/* This is the popup confirmation sent  message  */}
           <p className="text-gray-600 mb-6">
             Your safari inquiry has been received! Our team will contact you within 24 hours to start planning your adventure.
           </p>

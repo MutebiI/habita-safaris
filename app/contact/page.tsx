@@ -158,7 +158,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg">Email Us</h4>
-                      <p className="opacity-90">info@habitasafaris.com<br />bookings@habitasafaris.com</p>
+                      <p className="opacity-90">info@igaratoursafaris.com<br />bookings@igaratoursafaris.com</p>
                     </div>
                   </div>
 
@@ -196,7 +196,7 @@ export default function Contact() {
               <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
                 <h4 className="text-xl font-bold text-yellow-800 mb-3">🚀 Quick Response Guaranteed</h4>
                 <p className="text-yellow-700">
-                  We typically respond within 2 hours during business hours. For urgent inquiries, 
+                  We typically respond within 1 - 2 hours during business hours. For urgent inquiries, 
                   call or WhatsApp us directly for instant assistance.
                 </p>
               </div>
